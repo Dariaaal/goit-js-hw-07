@@ -10,7 +10,7 @@ galleryList.insertAdjacentHTML('beforeend', imagesMarkup);
 
 function createImagesMarkup(galleryItems){
     return galleryItems.map(({preview, original, description})=>{
-        return `<a class='gallery__link' href='large-image.jpq'>
+        return `<a class='gallery__link' href='${original}'>
         <img  class='gallery__image' src ='${preview}' data-source='${original}' alt ='${description}'>
         </a>`;}).join('');
 }
